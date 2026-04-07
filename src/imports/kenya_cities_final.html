@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+    <style>
+        /* Pulse Animation Style */
+        .pulse-marker {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: #36ac43; /* Green circular wave color */
+            border-radius: 50%;
+            pointer-events: none; /* Let clicks pass through the animation */
+            animation: pulse-wave 1s ease-out infinite;
+            transform: translate(-50%, -50%); /* Center the animation */
+            opacity: 0;
+            z-index: 1000;
+        }
+
+        @keyframes pulse-wave {
+            0% {
+                width: 20px;
+                height: 20px;
+                opacity: 1;
+            }
+            100% {
+                width: 80px; /* Expanding wave diameter */
+                height: 80px;
+                opacity: 0;
+            }
+        }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_439088b9ee26b7a77fc5a67a69319c3a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Find all marker icon elements on the map
+            var markers = document.querySelectorAll('.leaflet-marker-icon');
+
+            markers.forEach(function(marker) {
+                marker.addEventListener('click', function(event) {
+                    // Remove any existing pulse animation when clicking a new marker
+                    var existingPulse = document.querySelector('.pulse-marker');
+                    if (existingPulse) {
+                        existingPulse.remove();
+                    }
+
+                    // Create the HTML element for the pulse wave
+                    var pulse = document.createElement('div');
+                    pulse.className = 'pulse-marker';
+
+                    // Position the animation relative to the marker's coordinates
+                    pulse.style.left = event.originalEvent.pageX + 'px';
+                    pulse.style.top = event.originalEvent.pageY + 'px';
+
+                    // Add the animation element to the map body
+                    document.body.appendChild(pulse);
+
+                    // Optional: Remove the pulse element after 1 second (one animation cycle)
+                    setTimeout(function() {
+                        if (pulse) {
+                            pulse.remove();
+                        }
+                    }, 1000); // 1 second
+                });
+            });
+        });
+    </script>
+    
+            <div class="folium-map" id="map_439088b9ee26b7a77fc5a67a69319c3a" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_439088b9ee26b7a77fc5a67a69319c3a = L.map(
+                "map_439088b9ee26b7a77fc5a67a69319c3a",
+                {
+                    center: [-1.286389, 36.817223],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "maxBounds": [
+[
+-90,
+-180,
+],
+[
+90,
+180,
+],
+],
+  "zoom": 6,
+  "zoomControl": true,
+  "preferCanvas": false,
+  "locationBounds": [
+[
+-5.0,
+33.5,
+],
+[
+5.5,
+42.0,
+],
+],
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_b6b6f11858f1800df5548f3eba001496 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 6,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_b6b6f11858f1800df5548f3eba001496.addTo(map_439088b9ee26b7a77fc5a67a69319c3a);
+        
+    
+            map_439088b9ee26b7a77fc5a67a69319c3a.fitBounds(
+                [[-5.0, 33.5], [5.5, 42.0]],
+                {}
+            );
+        
+    
+            var marker_f784444623d4e61a51778b4fd62a5787 = L.marker(
+                [-1.286389, 36.817223],
+                {
+}
+            ).addTo(map_439088b9ee26b7a77fc5a67a69319c3a);
+        
+    
+            var icon_308798c92ab505fafe929afcd768941d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgray",
+  "iconColor": "#000080",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_951a4fbedd9a38aabe35e95f07546e06 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e7f76d9526e605ac180584c09e375c43 = $(`<div id="html_e7f76d9526e605ac180584c09e375c43" style="width: 100.0%; height: 100.0%;">Nairobi</div>`)[0];
+                popup_951a4fbedd9a38aabe35e95f07546e06.setContent(html_e7f76d9526e605ac180584c09e375c43);
+            
+        
+
+        marker_f784444623d4e61a51778b4fd62a5787.bindPopup(popup_951a4fbedd9a38aabe35e95f07546e06)
+        ;
+
+        
+    
+    
+            marker_f784444623d4e61a51778b4fd62a5787.bindTooltip(
+                `<div>
+                     Click for Nairobi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f784444623d4e61a51778b4fd62a5787.setIcon(icon_308798c92ab505fafe929afcd768941d);
+            
+    
+            var marker_8e267c8e62a8ca799c7f6a854ee18394 = L.marker(
+                [-4.043477, 39.668206],
+                {
+}
+            ).addTo(map_439088b9ee26b7a77fc5a67a69319c3a);
+        
+    
+            var icon_8eebcc0834867a24a00a1020ede6f37f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgray",
+  "iconColor": "#FF0000",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_32151a3f8bcf9cd08ea6ac391ca33089 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f2446d36204d1ff4a6ae16d2e4fcdd0c = $(`<div id="html_f2446d36204d1ff4a6ae16d2e4fcdd0c" style="width: 100.0%; height: 100.0%;">Mombasa</div>`)[0];
+                popup_32151a3f8bcf9cd08ea6ac391ca33089.setContent(html_f2446d36204d1ff4a6ae16d2e4fcdd0c);
+            
+        
+
+        marker_8e267c8e62a8ca799c7f6a854ee18394.bindPopup(popup_32151a3f8bcf9cd08ea6ac391ca33089)
+        ;
+
+        
+    
+    
+            marker_8e267c8e62a8ca799c7f6a854ee18394.bindTooltip(
+                `<div>
+                     Click for Mombasa
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8e267c8e62a8ca799c7f6a854ee18394.setIcon(icon_8eebcc0834867a24a00a1020ede6f37f);
+            
+    
+            var marker_6866717d6aba5f4c0db93b234a2e3828 = L.marker(
+                [-0.102213, 34.761713],
+                {
+}
+            ).addTo(map_439088b9ee26b7a77fc5a67a69319c3a);
+        
+    
+            var icon_cff9d367f6aa6e831fc0dcb8f566a98f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgray",
+  "iconColor": "#FFD700",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1f3bac38c808d884f43080fdac956b21 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_195d13b36108708fdcfbcd85f1b34c3d = $(`<div id="html_195d13b36108708fdcfbcd85f1b34c3d" style="width: 100.0%; height: 100.0%;">Kisumu</div>`)[0];
+                popup_1f3bac38c808d884f43080fdac956b21.setContent(html_195d13b36108708fdcfbcd85f1b34c3d);
+            
+        
+
+        marker_6866717d6aba5f4c0db93b234a2e3828.bindPopup(popup_1f3bac38c808d884f43080fdac956b21)
+        ;
+
+        
+    
+    
+            marker_6866717d6aba5f4c0db93b234a2e3828.bindTooltip(
+                `<div>
+                     Click for Kisumu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6866717d6aba5f4c0db93b234a2e3828.setIcon(icon_cff9d367f6aa6e831fc0dcb8f566a98f);
+            
+    
+            var marker_f53229af9a7122d4eac92eb2b3381477 = L.marker(
+                [-0.303099, 36.061307],
+                {
+}
+            ).addTo(map_439088b9ee26b7a77fc5a67a69319c3a);
+        
+    
+            var icon_cde9e3a255c2da87df9109ede9a6f2f4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgray",
+  "iconColor": "#3D3D3D",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e9b393e94068aba45744862d280fb756 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_67aea1b251d76de07241de8e40cbfe09 = $(`<div id="html_67aea1b251d76de07241de8e40cbfe09" style="width: 100.0%; height: 100.0%;">Nakuru</div>`)[0];
+                popup_e9b393e94068aba45744862d280fb756.setContent(html_67aea1b251d76de07241de8e40cbfe09);
+            
+        
+
+        marker_f53229af9a7122d4eac92eb2b3381477.bindPopup(popup_e9b393e94068aba45744862d280fb756)
+        ;
+
+        
+    
+    
+            marker_f53229af9a7122d4eac92eb2b3381477.bindTooltip(
+                `<div>
+                     Click for Nakuru
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f53229af9a7122d4eac92eb2b3381477.setIcon(icon_cde9e3a255c2da87df9109ede9a6f2f4);
+            
+    
+            var marker_f3eec9abaf112a4b8b49ce32cc83c065 = L.marker(
+                [0.514277, 35.26978],
+                {
+}
+            ).addTo(map_439088b9ee26b7a77fc5a67a69319c3a);
+        
+    
+            var icon_b66c0bf5102cfb975d5771f31409943b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgray",
+  "iconColor": "#add8e6",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ded282e6fe9b7dd1773018095f47acf6 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b737b94f3d287c58067ab0670934c499 = $(`<div id="html_b737b94f3d287c58067ab0670934c499" style="width: 100.0%; height: 100.0%;">Eldoret</div>`)[0];
+                popup_ded282e6fe9b7dd1773018095f47acf6.setContent(html_b737b94f3d287c58067ab0670934c499);
+            
+        
+
+        marker_f3eec9abaf112a4b8b49ce32cc83c065.bindPopup(popup_ded282e6fe9b7dd1773018095f47acf6)
+        ;
+
+        
+    
+    
+            marker_f3eec9abaf112a4b8b49ce32cc83c065.bindTooltip(
+                `<div>
+                     Click for Eldoret
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f3eec9abaf112a4b8b49ce32cc83c065.setIcon(icon_b66c0bf5102cfb975d5771f31409943b);
+            
+    
+            var marker_ebbdde504c339678423f5d44a6332c26 = L.marker(
+                [-0.3678, 35.2831],
+                {
+}
+            ).addTo(map_439088b9ee26b7a77fc5a67a69319c3a);
+        
+    
+            var icon_ecc2b7760573c80dfc966582b58270dd = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgray",
+  "iconColor": "#F5F5F5",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_93d6e9cf891f74d974b22de980b63396 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0f8c7c0655c411953a991f4b7b5e6779 = $(`<div id="html_0f8c7c0655c411953a991f4b7b5e6779" style="width: 100.0%; height: 100.0%;">Kericho</div>`)[0];
+                popup_93d6e9cf891f74d974b22de980b63396.setContent(html_0f8c7c0655c411953a991f4b7b5e6779);
+            
+        
+
+        marker_ebbdde504c339678423f5d44a6332c26.bindPopup(popup_93d6e9cf891f74d974b22de980b63396)
+        ;
+
+        
+    
+    
+            marker_ebbdde504c339678423f5d44a6332c26.bindTooltip(
+                `<div>
+                     Click for Kericho
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ebbdde504c339678423f5d44a6332c26.setIcon(icon_ecc2b7760573c80dfc966582b58270dd);
+            
+    
+            var marker_8b1f5dd71d7a1b30f6362408d63136ac = L.marker(
+                [-3.6305, 39.8499],
+                {
+}
+            ).addTo(map_439088b9ee26b7a77fc5a67a69319c3a);
+        
+    
+            var icon_95f8d61d9a722546bf5d37af496bc0b3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgray",
+  "iconColor": "#FF6347",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_664324597dc2b0a4bbdc499523c1ba71 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_52bc3ed444aa62f4e2c34027e6537082 = $(`<div id="html_52bc3ed444aa62f4e2c34027e6537082" style="width: 100.0%; height: 100.0%;">Kilifi</div>`)[0];
+                popup_664324597dc2b0a4bbdc499523c1ba71.setContent(html_52bc3ed444aa62f4e2c34027e6537082);
+            
+        
+
+        marker_8b1f5dd71d7a1b30f6362408d63136ac.bindPopup(popup_664324597dc2b0a4bbdc499523c1ba71)
+        ;
+
+        
+    
+    
+            marker_8b1f5dd71d7a1b30f6362408d63136ac.bindTooltip(
+                `<div>
+                     Click for Kilifi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_8b1f5dd71d7a1b30f6362408d63136ac.setIcon(icon_95f8d61d9a722546bf5d37af496bc0b3);
+            
+    
+            var marker_e5d9fb853c40a16874b9cfb7191a47df = L.marker(
+                [-4.1737, 39.4606],
+                {
+}
+            ).addTo(map_439088b9ee26b7a77fc5a67a69319c3a);
+        
+    
+            var icon_8d5478e663279412ec11f16a47182f78 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "lightgray",
+  "iconColor": "#4169E1",
+  "icon": "info-sign",
+  "prefix": "glyphicon",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d3db6a9a0342a9c66185722d8e4d4d6d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_667be150fab87970d79438f7ab2e67a5 = $(`<div id="html_667be150fab87970d79438f7ab2e67a5" style="width: 100.0%; height: 100.0%;">Kwale</div>`)[0];
+                popup_d3db6a9a0342a9c66185722d8e4d4d6d.setContent(html_667be150fab87970d79438f7ab2e67a5);
+            
+        
+
+        marker_e5d9fb853c40a16874b9cfb7191a47df.bindPopup(popup_d3db6a9a0342a9c66185722d8e4d4d6d)
+        ;
+
+        
+    
+    
+            marker_e5d9fb853c40a16874b9cfb7191a47df.bindTooltip(
+                `<div>
+                     Click for Kwale
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e5d9fb853c40a16874b9cfb7191a47df.setIcon(icon_8d5478e663279412ec11f16a47182f78);
+            
+</script>
+</html>

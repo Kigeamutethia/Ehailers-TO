@@ -1,0 +1,146 @@
+npm run dev
+
+> @figma/my-make-file@0.0.1 dev
+> vite
+
+
+  VITE v6.3.5  ready in 955 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+  ➜  press h + enter to show help
+12:31:53 [vite] Internal server error: Failed to resolve import "figma:asset/5a934a4c69b9e3b42b672ca8f08ca5e4158aa01a.png" from "src/app/pages/About.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: D:/DMP/Kigea Projects/Ehailers/src/app/pages/About.tsx:5:27
+  18 |  import { Users } from "lucide-react";
+  19 |  import { TeamCarousel } from "../components/TeamCarousel";
+  20 |  import danielMangaImg from "figma:asset/5a934a4c69b9e3b42b672ca8f08ca5e4158aa01a.png";
+     |                              ^
+  21 |  import davidMuigaiImg from "figma:asset/7ca6d9e7ef9bfcf5a81968532654fd05c85c9924.png";
+  22 |  import davidMuteruImg from "figma:asset/810643c9980cc4bf0d38ac618d2a9c1906c1abb5.png";
+      at TransformPluginContext._formatLog (file:///D:/DMP/Kigea%20Projects/Ehailers/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42499:41)
+      at TransformPluginContext.error (file:///D:/DMP/Kigea%20Projects/Ehailers/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42496:16)
+      at normalizeUrl (file:///D:/DMP/Kigea%20Projects/Ehailers/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40475:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///D:/DMP/Kigea%20Projects/Ehailers/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40594:37
+      at async Promise.all (index 6)
+      at async TransformPluginContext.transform (file:///D:/DMP/Kigea%20Projects/Ehailers/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40521:7)
+      at async EnvironmentPluginContainer.transform (file:///D:/DMP/Kigea%20Projects/Ehailers/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42294:18)
+      at async loadAndTransform (file:///D:/DMP/Kigea%20Projects/Ehailers/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:35735:27)
+12:31:53 [vite] (client) Pre-transform error: Failed to resolve import "figma:asset/5a934a4c69b9e3b42b672ca8f08ca5e4158aa01a.png" from "src/app/pages/About.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: D:/DMP/Kigea Projects/Ehailers/src/app/pages/About.tsx:5:27
+  18 |  import { Users } from "lucide-react";
+  19 |  import { TeamCarousel } from "../components/TeamCarousel";
+  20 |  import danielMangaImg from "figma:asset/5a934a4c69b9e3b42b672ca8f08ca5e4158aa01a.png";
+     |                              ^
+  21 |  import davidMuigaiImg from "figma:asset/7ca6d9e7ef9bfcf5a81968532654fd05c85c9924.png";
+  22 |  import davidMuteruImg from "figma:asset/810643c9980cc4bf0d38ac618d2a9c1906c1abb5.png";
+12:31:53 [vite] Internal server error: Failed to resolve import "figma:asset/2f2163a6ae5ae8b9b5dee8c4597753ebde84ca94.png" from "src/app/pages/Membership.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: D:/DMP/Kigea Projects/Ehailers/src/app/pages/Membership.tsx:5:27
+  18 |  import { motion } from "motion/react";
+  19 |  import { CheckCircle, UserPlus, FileText, Users, X, Phone, Mail } from "lucide-react";
+  20 |  import heroMeetingImg from "figma:asset/2f2163a6ae5ae8b9b5dee8c4597753ebde84ca94.png";
+     |                              ^
+  21 |  import { useState } from "react";
+  22 |  export function Membership() {
+      at TransformPluginContext._formatLog (file:///D:/DMP/Kigea%20Projects/Ehailers/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42499:41)
+      at TransformPluginContext.error (file:///D:/DMP/Kigea%20Projects/Ehailers/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42496:16)
+      at normalizeUrl (file:///D:/DMP/Kigea%20Projects/Ehailers/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40475:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///D:/DMP/Kigea%20Projects/Ehailers/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40594:37
+      at async Promise.all (index 5)
+      at async TransformPluginContext.transform (file:///D:/DMP/Kigea%20Projects/Ehailers/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40521:7)
+      at async EnvironmentPluginContainer.transform (file:///D:/DMP/Kigea%20Projects/Ehailers/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42294:18)
+      at async loadAndTransform (file:///D:/DMP/Kigea%20Projects/Ehailers/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:35735:27)
+12:31:53 [vite] (client) Pre-transform error: Failed to resolve import "figma:asset/2f2163a6ae5ae8b9b5dee8c4597753ebde84ca94.png" from "src/app/pages/Membership.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: D:/DMP/Kigea Projects/Ehailers/src/app/pages/Membership.tsx:5:27
+  18 |  import { motion } from "motion/react";
+  19 |  import { CheckCircle, UserPlus, FileText, Users, X, Phone, Mail } from "lucide-react";
+  20 |  import heroMeetingImg from "figma:asset/2f2163a6ae5ae8b9b5dee8c4597753ebde84ca94.png";
+     |                              ^
+  21 |  import { useState } from "react";
+  22 |  export function Membership() {
+12:31:53 [vite] Internal server error: Failed to resolve import "figma:asset/6a20c175639e3f517c6fd795a0abfc4e9ca0f7fa.png" from "src/app/components/Layout.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: D:/DMP/Kigea Projects/Ehailers/src/app/components/Layout.tsx:5:17
+  20 |  import { Menu, X, ChevronDown } from "lucide-react";
+  21 |  import { motion, AnimatePresence } from "motion/react";
+  22 |  import logo from "figma:asset/6a20c175639e3f517c6fd795a0abfc4e9ca0f7fa.png";
+     |                    ^
+  23 |  import { ScrollToTop } from "./ScrollToTop";
+  24 |  export function Layout() {
+      at TransformPluginContext._formatLog (file:///D:/DMP/Kigea%20Projects/Ehailers/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42499:41)
+      at TransformPluginContext.error (file:///D:/DMP/Kigea%20Projects/Ehailers/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42496:16)
+      at normalizeUrl (file:///D:/DMP/Kigea%20Projects/Ehailers/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40475:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///D:/DMP/Kigea%20Projects/Ehailers/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40594:37
+      at async Promise.all (index 7)
+      at async TransformPluginContext.transform (file:///D:/DMP/Kigea%20Projects/Ehailers/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40521:7)
+      at async EnvironmentPluginContainer.transform (file:///D:/DMP/Kigea%20Projects/Ehailers/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42294:18)
+      at async loadAndTransform (file:///D:/DMP/Kigea%20Projects/Ehailers/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:35735:27)
+12:31:53 [vite] (client) Pre-transform error: Failed to resolve import "figma:asset/6a20c175639e3f517c6fd795a0abfc4e9ca0f7fa.png" from "src/app/components/Layout.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: D:/DMP/Kigea Projects/Ehailers/src/app/components/Layout.tsx:5:17
+  20 |  import { Menu, X, ChevronDown } from "lucide-react";
+  21 |  import { motion, AnimatePresence } from "motion/react";
+  22 |  import logo from "figma:asset/6a20c175639e3f517c6fd795a0abfc4e9ca0f7fa.png";
+     |                    ^
+  23 |  import { ScrollToTop } from "./ScrollToTop";
+  24 |  export function Layout() {
+12:31:53 [vite] Internal server error: Failed to resolve import "figma:asset/2f2163a6ae5ae8b9b5dee8c4597753ebde84ca94.png" from "src/app/pages/Services.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: D:/DMP/Kigea Projects/Ehailers/src/app/pages/Services.tsx:14:27
+  27 |  } from "lucide-react";
+  28 |  import { ImpactCounter } from "../components/ImpactCounter";
+  29 |  import heroMeetingImg from "figma:asset/2f2163a6ae5ae8b9b5dee8c4597753ebde84ca94.png";
+     |                              ^
+  30 |  import policyEngagementImg from "figma:asset/cc962edb7125395e0c8419d48d3e52b373390201.png";
+  31 |  import judiciaryBuildingImg from "figma:asset/6e2b1feb5fa17bd0c2740fbac106b25c978d62ef.png";
+      at TransformPluginContext._formatLog (file:///D:/DMP/Kigea%20Projects/Ehailers/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42499:41)
+      at TransformPluginContext.error (file:///D:/DMP/Kigea%20Projects/Ehailers/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42496:16)
+      at normalizeUrl (file:///D:/DMP/Kigea%20Projects/Ehailers/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40475:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///D:/DMP/Kigea%20Projects/Ehailers/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40594:37
+      at async Promise.all (index 6)
+      at async TransformPluginContext.transform (file:///D:/DMP/Kigea%20Projects/Ehailers/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40521:7)
+      at async EnvironmentPluginContainer.transform (file:///D:/DMP/Kigea%20Projects/Ehailers/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42294:18)
+      at async loadAndTransform (file:///D:/DMP/Kigea%20Projects/Ehailers/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:35735:27)
+12:31:53 [vite] (client) Pre-transform error: Failed to resolve import "figma:asset/2f2163a6ae5ae8b9b5dee8c4597753ebde84ca94.png" from "src/app/pages/Services.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: D:/DMP/Kigea Projects/Ehailers/src/app/pages/Services.tsx:14:27
+  27 |  } from "lucide-react";
+  28 |  import { ImpactCounter } from "../components/ImpactCounter";
+  29 |  import heroMeetingImg from "figma:asset/2f2163a6ae5ae8b9b5dee8c4597753ebde84ca94.png";
+     |                              ^
+  30 |  import policyEngagementImg from "figma:asset/cc962edb7125395e0c8419d48d3e52b373390201.png";
+  31 |  import judiciaryBuildingImg from "figma:asset/6e2b1feb5fa17bd0c2740fbac106b25c978d62ef.png";
+12:31:53 [vite] Internal server error: Failed to resolve import "figma:asset/312b23da5bbe297f0c1609fb20b27578078caccd.png" from "src/app/pages/Home.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: D:/DMP/Kigea Projects/Ehailers/src/app/pages/Home.tsx:9:24
+  21 |  import { ImpactCounter } from "../components/ImpactCounter";
+  22 |  import { KenyaMap } from "../components/KenyaMap";
+  23 |  import meetingImg1 from "figma:asset/312b23da5bbe297f0c1609fb20b27578078caccd.png";
+     |                           ^
+  24 |  import meetingImg2 from "figma:asset/8f8c2e61c67dd4c5c74b4c5d462d2d117055d374.png";
+  25 |  import meetingImg3 from "figma:asset/73e37debae00be8d10fdb23bc78f6e6a86430eb6.png";
+      at TransformPluginContext._formatLog (file:///D:/DMP/Kigea%20Projects/Ehailers/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42499:41)
+      at TransformPluginContext.error (file:///D:/DMP/Kigea%20Projects/Ehailers/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42496:16)
+      at normalizeUrl (file:///D:/DMP/Kigea%20Projects/Ehailers/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40475:23)
+      at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+      at async file:///D:/DMP/Kigea%20Projects/Ehailers/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40594:37
+      at async Promise.all (index 9)
+      at async TransformPluginContext.transform (file:///D:/DMP/Kigea%20Projects/Ehailers/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:40521:7)
+      at async EnvironmentPluginContainer.transform (file:///D:/DMP/Kigea%20Projects/Ehailers/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:42294:18)
+      at async loadAndTransform (file:///D:/DMP/Kigea%20Projects/Ehailers/node_modules/vite/dist/node/chunks/dep-DBxKXgDP.js:35735:27)
+12:31:53 [vite] (client) Pre-transform error: Failed to resolve import "figma:asset/312b23da5bbe297f0c1609fb20b27578078caccd.png" from "src/app/pages/Home.tsx". Does the file exist?
+  Plugin: vite:import-analysis
+  File: D:/DMP/Kigea Projects/Ehailers/src/app/pages/Home.tsx:9:24
+  21 |  import { ImpactCounter } from "../components/ImpactCounter";
+  22 |  import { KenyaMap } from "../components/KenyaMap";
+  23 |  import meetingImg1 from "figma:asset/312b23da5bbe297f0c1609fb20b27578078caccd.png";
+     |                           ^
+  24 |  import meetingImg2 from "figma:asset/8f8c2e61c67dd4c5c74b4c5d462d2d117055d374.png";
+  25 |  import meetingImg3 from "figma:asset/73e37debae00be8d10fdb23bc78f6e6a86430eb6.png";
