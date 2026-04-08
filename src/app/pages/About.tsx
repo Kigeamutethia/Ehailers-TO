@@ -13,18 +13,22 @@ import juliusNyambokImage from '@/assets/images/julius-nyambok.png';
 import mathewLesanjoImage from '@/assets/images/mathew-lesanjo.png';
 import wilberforceNgieImage from '@/assets/images/wilberforce-ngie.png';
 import danielMangaImage from '@/assets/images/daniel-manga.png';
+import davidmuigaiImage from '@/assets/images/david-muigai.png';
+import dennisnyarikiImage from '@/assets/images/dennis-nyariki.png';
+import davidmuteruiImage from '@/assets/images/david-muteru.png';
+import calvinceOkumuImage from '@/assets/images/calvinc-okumu.png';
 
 export function About() {
   const teamMembers = [
     { name: 'Daniel Manga', role: 'Chairperson', image: danielMangaImage },
     { name: 'Justin Nyaga', role: 'Secretary General', image: justinNyagaImage },
     { name: 'Sophia Ibrahim Gedo', role: 'Treasurer', image: sophiaIbrahimGedoImage },
-    { name: 'Dennis Nyariki', role: 'Organising Secretary', image: wilberforceNgieImage },
+    { name: 'Dennis Nyariki', role: 'Organising Secretary', image: dennisnyarikiImage },
     { name: 'Salma Kikowa', role: 'Woman Representative', image: salmaKikowaImage },
-    { name: 'David Muigai', role: 'Administrator', image: mathewLesanjoImage },
-    { name: 'David Muteru', role: 'Trustee & Board Secretary', image: juliusNyambokImage },
+    { name: 'David Muigai', role: 'Administrator', image: davidmuigaiImage },
+    { name: 'David Muteru', role: 'Trustee & Board Secretary', image: davidmuteruiImage },
     { name: 'Wycliffe Alutalala', role: 'Legal Research', image: wycliffeAlutalaImage },
-    { name: 'Calvince Okumu', role: 'Board Member', image: wilberforceNgieImage },
+    { name: 'Calvince Okumu', role: 'Board Member', image: calvinceOkumuImage },
     { name: 'Julius Nyambok', role: 'Board Member', image: juliusNyambokImage },
     { name: 'Mathew Lesanjo', role: 'Board Member', image: mathewLesanjoImage },
     { name: 'Wilberforce Ngie', role: 'Board Member', image: wilberforceNgieImage },

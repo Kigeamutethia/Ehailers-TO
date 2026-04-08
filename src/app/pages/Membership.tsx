@@ -56,7 +56,7 @@ This application was submitted through the Ehailers website membership form.
     `;
 
     // Open email client with pre-filled data
-    const mailtoLink = `mailto:info@ehailers.org?subject=Membership Application - ${formData.organizationName}&body=${encodeURIComponent(emailBody)}`;
+    const mailtoLink = `mailto:info@ehailersfoundation.org?subject=Membership Application - ${formData.organizationName}&body=${encodeURIComponent(emailBody)}`;
     window.location.href = mailtoLink;
     
     // Close the modal
@@ -95,18 +95,22 @@ This application was submitted through the Ehailers website membership form.
   ];
 
   const memberOrganizations = [
-    'Organisation of Online Drivers (OOD)',
-    'Ridehail Transport Association (RTA)',
-    'Digital Taxi Association of Kenya (DTAK)',
-    'Nairobi Boda Boda Operators Cooperative',
-    'Coast Region Transport Welfare Group',
-    'Rift Valley Digital Drivers Association',
-    'Western Kenya Transport Cooperative',
-    'Nyanza Region Ride-Hailing Network',
-    'Mt. Kenya Transport Operators Union',
-    'Mombasa Digital Taxi Drivers',
-    'Nakuru Transport Operators Forum',
-    'Kisumu Mobility Solutions Group'
+    'RIDEHAIL TRANSPORT ASSOCIATION',
+    'DIGITAL TAXI ASSOCIATION OF KENYA',
+    'COAST DIGITAL DRIVERS ASSOCIATION',
+    'KAHAWA SUKARI MOVERS WELFARE',
+    'EASTLANDS UNIQUE WELFARE GROUP',
+    'VOICE OF ONLINE DRIVERS',
+    'COWORKERS SELF-HELP/PROJECT',
+    'OOD KANGUDO ROAD ZONE',
+    'NAIROBI ONLINE DRIVERS EQUITY',
+    'ORGANIZATION OF ONLINE DRIVERS',
+    'MAGADI ROAD ONLINE DRIVERS SHG',
+    'DIGITAL BODA DRIVERS and DELIVERIES ASSOCIATION',
+    'ONLINE DRIVERS KAHAWA WENDANI SHG',
+    'UNITED CAPTAINS',
+    'UNITY OF ONLINE DRIVERS',
+    'BLESSED LADIES WELFARE ORGANISATION'
   ];
 
   const applicationSteps = [

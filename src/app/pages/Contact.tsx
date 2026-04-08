@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 import { useState } from 'react';
 import { Mail, Phone, MapPin, Clock, Send, Facebook, Linkedin } from 'lucide-react';
 import { ImageWithFallback } from '../components/figma/ImageWithFallback';
-import judiciaryBuildingImage from '../../assets/images/judiciary-building.png';
+import judiciaryBuildingImage from '../../assets/images/meeting-4.png';
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -42,7 +42,7 @@ This message was submitted through the Ehailers website contact form.
     const subjectLine = `Contact Form: ${formData.subject || 'General Inquiry'} - ${formData.name}`;
 
     // Open email client with pre-filled data
-    const mailtoLink = `mailto:info@ehailers.org?subject=${encodeURIComponent(subjectLine)}&body=${encodeURIComponent(emailBody)}`;
+    const mailtoLink = `mailto:info@ehailersfoundation.org?subject=${encodeURIComponent(subjectLine)}&body=${encodeURIComponent(emailBody)}`;
     window.location.href = mailtoLink;
     
     // Reset form
@@ -79,7 +79,7 @@ This message was submitted through the Ehailers website contact form.
     {
       icon: Mail,
       title: 'Email Address',
-      details: ['info@ehailers.org'],
+      details: ['info@ehailersfoundation.org'],
       color: 'var(--gold-highlight)'
     },
     {

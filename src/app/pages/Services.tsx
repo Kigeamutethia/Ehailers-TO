@@ -16,6 +16,11 @@ import countyGovBuildingImage from '../../assets/images/county-gov-building.png'
 import parliamentChamberImage from '../../assets/images/parliament-chamber.png';
 import meetingImage from '../../assets/images/meeting-1.png';
 import memberMeetingImage from '../../assets/images/member-meeting.png';
+import policyEngagementImage from '../../assets/images/policy-engagement.png';
+import regulatoryComplianceImage from '../../assets/images/transport-operators.png';
+import transportNetworkImage from '../../assets/images/taxi-drivers.png';
+import stakeholderPartnershipsImage from '../../assets/images/stakeholder-partnerships.png';
+import meetingPresentationImage from '../../assets/images/meeting-3.png';
 
 export function Services() {
   const services = [
@@ -30,7 +35,7 @@ export function Services() {
         'Stakeholder consultations and roundtables'
       ],
       color: 'var(--navy-blue)',
-      image: meetingImage
+      image: policyEngagementImage
     },
     {
       icon: Shield,
@@ -43,7 +48,7 @@ export function Services() {
         'Regulatory updates and briefings'
       ],
       color: 'var(--red-cta)',
-      image: judiciaryBuildingImage
+      image: regulatoryComplianceImage
     },
     {
       icon: Building2,
@@ -56,7 +61,7 @@ export function Services() {
         'Institutional partnerships for member benefits'
       ],
       color: 'var(--gold-highlight)',
-      image: countyGovBuildingImage
+      image: judiciaryBuildingImage
     },
     {
       icon: Scale,
@@ -95,7 +100,7 @@ export function Services() {
         'Fair deactivation policies'
       ],
       color: 'var(--gold-highlight)',
-      image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=800'
+      image: transportNetworkImage
     },
     {
       icon: Handshake,
@@ -110,7 +115,7 @@ export function Services() {
         'Fuel card and maintenance programs'
       ],
       color: 'var(--navy-blue)',
-      image: meetingImage
+      image: stakeholderPartnershipsImage
     }
   ];
 
@@ -120,7 +125,7 @@ export function Services() {
       <section className="relative h-96 overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src={meetingImage}
+            src={policyEngagementImage}
             alt="Modern Office"
             className="w-full h-full object-cover"
           />
@@ -294,7 +299,7 @@ export function Services() {
               className="rounded-xl overflow-hidden shadow-2xl"
             >
               <img
-                src={meetingImage}
+                src={policyEngagementImage}
                 alt="Policy Engagement Meeting"
                 className="w-full h-96 object-cover"
               />
@@ -314,7 +319,7 @@ export function Services() {
             >
               <div className="rounded-xl overflow-hidden shadow-2xl">
                 <img
-                  src={judiciaryBuildingImage}
+                  src={meetingPresentationImage}
                   alt="Taxi Rates Presentation"
                   className="w-full h-80 object-cover"
                 />
@@ -355,7 +360,7 @@ export function Services() {
               className="rounded-xl overflow-hidden shadow-lg"
             >
               <img
-                src={countyGovBuildingImage}
+                src={policyEngagementImage}
                 alt="Transport Operator Member"
                 className="w-full h-64 object-cover"
               />
@@ -369,7 +374,7 @@ export function Services() {
               className="rounded-xl overflow-hidden shadow-lg"
             >
               <img
-                src={parliamentChamberImage}
+                src={memberMeetingImage}
                 alt="Government Engagement Meeting"
                 className="w-full h-64 object-cover"
               />
@@ -424,7 +429,7 @@ export function Services() {
             >
               <div className="rounded-xl overflow-hidden shadow-2xl">
                 <img
-                  src={judiciaryBuildingImage}
+                  src={meetingPresentationImage}
                   alt="Taxi Rates Advocacy Presentation"
                   className="w-full h-80 object-cover"
                 />
